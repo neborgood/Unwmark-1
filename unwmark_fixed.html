@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unwmark</title>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIlVud21hcmsiLCAic2hvcnRfbmFtZSI6ICJVbndtYXJrIiwgInN0YXJ0X3VybCI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMxMTEiLCAidGhlbWVfY29sb3IiOiAiIzExMSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQVlBQUFCUzNHd0hBQUFkSFVsRVFWUjQydTJkZTVDVjFabXZuM2V0YjE5NmR6ZlF6VFVJUjhVWUJzSlZSVkFUV3hKUlJ6T1lpcmJKbWNSRXJUbnhUR3JNVkNWelRDYUpnNDZKbVpDYW5KcVltak1tS1hNeE15ZUNaQ0tKRElnSllBYUZaRlF1cGcwaDRnVU80ZHBOWC9iOVcydWRQNzdkMERld1JSRDJ0OWRicFJadDBkQnIvMzd2ZXRhN0xxL3c5b1ZBaTRZTkRqREh2dHlxeHplOU1zMkU3bHlIV1FCTUZlUThoOU1pYmphSXhrY1ZoelBPeVZaQmpNTzlDdXdROUNZZHlHdjdPODUvQ1piMzBRSWFXZ1EyR01DOVRhSTg3YUdnUmNHR3NQY0x6YzB6SitteXVocFI3M0c0UzRFTFJWUTYrdXU0b3orNnczcjl4Q0FFMVVkdDBXZnNuQzBBT3dYNU5jNytwMG5ZcDlyYnQrODU5cnRhQXRoZzRmU0tRRTZ2OEZ1bDErSGo2bWVNZDBIaWV1ZmNCNEdGSXJxeFYrYk9XU3JLdDMxR3FmSTlmTVFnZWtWY3lXNmlBSkhvUDlIL2NLWWJXQ2NpUDVXd3ZPcEE5c1g5dllRQXk5M3BNb0tjbnUvWnFucUYzMVEvYTRiVytoUGdibFVTakhkSEJXOHIwOXpSVVJDdms5cGlvMk5KRHdHbFJSU0NZRjI0SCtRUlk0d1BPckxiWHV4akJIdXEwZWdVaTY0bDZFV2RTUGpCWjhCOVZJbE9XbWQ2UlU0ZjBmdncwY2NRcnBMbGxWYWlzYzZVUVA3Vm1QQWJ4NHh3VEdObmt3RjZ2NDhiWHo5cm5GSHFTNGk2VTBTU3pobkFoWlhGckJlOWorR2F3WUFFSWhyblhBbG5IOUxXZm5sL2R0dUJ2bm83Qlp6K1ZxTlY5MDVuWXhybjNtRzFla0dVdmd0czBybXdGM01DTDM0ZmJ5NmhTZ0M0U0VNMktVcmZaYlY2WVV6ajNEdU80Vk9yUGdWLzBGdEhudEYxY3lkSzRCNVdLcmoyR09wNHpQRnhxdkdvZ2tZMlhPTkN1ZU53L29XOWJ4V0o1QzM4UGdIczJCR3pyZ1gxUFVTL3c3blFvNDZQMDQ1R0lrR0FNMzhFZS92QnJtMXJLaVRqVGdhSlRtWUs2YzNzZHN5SU9VdEU5SGVCUm9jeEhuVjh2QTFvcE1BYVFZMUE5TWN5cWZIa2l2dlc5OUdsTzUwR1VFVDFXRGQ2eEp4dmEwbDgxam5UVzlueE83WSszaTRmVkhUb3JKTEUrOUtwY2Vma2kvdFdWc1N2M293SjVNMktmK1RJbVUxSmduOEJkWXR6WWRsbmZSOW5HSWxDa1NBQmRsbUo0SDkyZG03djZKT29UNWtCRk1ESWtUTkhKbXl3UmlrOXo3cHlXQkcvRHg5bjJnZWhra1JncmZsTldZWFhkblp1NzZ6OER6c3NZYit4U1pZQTJJVFYzNG5FSDVhOCtIMmNSVWdVV0JlV2xOTHpFbFovSnhMK2ttRWwrR0Z3ZTZ1R2Y3YWpHK2Q4V3luOXNVcWxKK0VIM2NkWkZ0cGhRbEhCakxyaytIUHlwVWRYUnRwdGMyL0JBQzBCckRLakcyZmZxMVh5TTg2VnkxNzhQczd1eGJFdGE1V2NsMDZPbFh6cGwrc2lEYjltVDJJTjBLcGh1V2tlTVdlUkZ2V2tjemFzR01ZdmVPTWlGem4rUittY3E5WWZ5d0ZHUkFYRzJXdmF1N2FzN2RYeW16R0FBdXk0K2huanJVNXNCY2FCYy9qanlmRVFQb0xEWXF4QkJwWE9CZWNjSW9KU1ZWdlp0aUFDSEZDbVBMdHl0SHJJeWxCd2dwbEJXYVVmRVZIam8vTVl2czRmRi9sYloxQXFvTEYrQkVNbGVoR3cxcEV2ZEJHZDJhKzZpRGJMSkJodmxYNEV1TzU0eVY2T2l6Nk5jejRScU9EN3Z0d1pQK3dwbFFyYytmR0htRHBsRG9XaVJTbDFsQjZjc3lRVGlvY2UrV3QydlB3czZYUTkxbGJyemJ5b1BCcmE4TGIyN2kwL0dBcUZaQWhEeU1pUk0wY21uRzRER1ZlWkhqMzZ4S0ZNb2dPNmVnNno2TDJmNU9NM2Y1NXN2Z0lLbFEvZVdHaHNnTFZQLzRSSEhydWIrc3dvckRYVi9DTlhiaGk2QTJVeDB5djdBLzNPREEwUWRxc2lxdmZmTHhKTUFPdTVQeWFobEtKUXpESjV3alJ1dlBiVFpQTVdheTNHT0l4MWxFTkxFRmhlMjdPYmYxLzFWVkxKVE85VjFhcitzY0U2a1dCQ3d1cjdJME8wcW9HTDNVb3NVYkRjam02Y09SV1JPNTBMYmVYTWhZOFloSE1PWnkyM0xGNUNmU1lUSFYwVWhZZ2dDQ0lPcFJUTGZ2WmxzdmtqQkVHeW1pdEJmYUZHT1JkYVJPNGMzVGh6YW5TdGNva2F3Z0J0QWpnUjlRVVJIVlNxUHI3a0dRZjBVUUhaWENjTHI3aWRXZE12SlpjM2ZiZ2ZqRFhVWnpUck5pNWpXOXRhTW5WVmp6NERzTjQ1RVIySXFDOUUrTk1tQXd3UVpmL201cm5UUUgzWVovK1lMWHJMZWNZMFQrYjY5MytLUXRIMnErdzQ1MGdtRklmYTIxbjFpMzhpbldvZ3VzWWFxMUdJWmdIVWh5T05INXNGS2lPeFhnRk9RdnNYU25UcTJFMTlIOVZ2QUVXcFhPQ21HNzdJcUJHTmhLSHJ0d0VXVlgyRUZVOHM1VWpYL2hpaHo2Qlp3Q3JSS1FudFgwU3p3UHFqQmhEWUVEWTB6Qmt yeU1lc004N1gvT09EUGoyNURoWmNkRE1MTGxwRU5tZjZiVzRaYTJqSWFEWTkveFNibm44c0RsV2ZFM2xBVzJlY0lCOXJhSmd6dG5LTlVsVDBYQ0VrdGZ1QWttQWNXSi85WTRNK0JjWTBUZUttRys2bVZCNEtmWVJESGUyc2VPSitrb202T0ZSOTNtQVdzRlpKTUM2cDNRZWlMN1ZvVlhtckUzSGM3SWpmM0ZmYjZKUG5waHZ1WVV4VE02WHlVT2lqV1BIRVVnNTE3Q0daU01jUmZRYUZ3emx4M0J6OWFvTlRnQms3ZHZvRW5GenBuQlcvK0kwYitseE5UODZnVDRBK0Raa21qQTFySVMwbzU2emc1TXF4WTZkUEFJd0NzSVhVSXExMFErWGxObzgvSG4zaWpFRkdLOTFnQzZsRlI2dEFDbG9xdXZjSTVORW4vaFFVdlZmZEFoREF4UWtuNFdYT0NSNS9xanVVMG1SelI0NkxQcmF5NGJYcCtiVTFoajc5TWNnNkMySXZnNHNUcXFtcFBCWGtnc3BSYVcrQUtrYWZNQ3d4YXNUNEN2cTRRZWdUQk1LUnJtNVdQUEdWU3VhdnlmNExLdEs2WE5EVVZKNnFWRmxkSUVqSzQwKzFHMEJUS1Bady9mdi9takhOelJYMjc0OCs2WlJpMVMvK21VUHR1eXZzWDdNZnVSTWtwY3JxQWlVd095SWY1OXV4VkRINjVQSkhtRFY5RVF1dnVJWHNJUFN4Wk9vMDI5cCt6YnFOMzZNK003SUcwYWVmL2kyaUVKaXRFRGZUUzZqSzBjZVVxYytNNHBiRjkrQ3NJMXJQOVVFZkRkbGNqbVVyNzBPVU91RmQ0Tm9hUERkVE9lU2RsYlkxZmxTcUZYMEszZHg0N2QxTW5qQnB3QTJ2Q3Zxa0ZZK3YrU2E3OTcxRU9sWE5ON3hPM2FpQnd5SHZWQjU5NG9FK1YxM2VHbFY5OU5Eb3MvNlo3MGRWSHhQNmdldURRa3FFMlpWcWdLOEF4UjU5L0xqMTVnN25MQ0xNVnY3a3AwZWZHaDVGN2JPK1I1L2FIa3MvQk5XS1BrMGVmYndCYWhkOUZsL3pOMHgreC9IUlorV1REN0w3ajIwZWZid0I0b1UrK1VJWEY1NC9ueXZuM3hSdGVQV2hXR3N0ZFduTnpsZDI4UFRtSDFHZkdlWFJ4eHNnUHVoanJTRVJwUGp3NG52UmdjYmEzbDZGRWZvbzVTaUhJY3RXTHNHRXBXcCsyOU1id01lQUQwcWlrNTdYTGZ3ckxwd3lsWHloLzlNbTFsbnFNNXJWNng3bTk3czJVNWNlRWVQN3ZkNEFOWWMrdVVJWEYwNlp6M1VMNzRndXQwdC85TW1rTlR0MzdXRDF1Z2VqeSszT2k5OGJJRmJvaytRamkrOGpFUVJZSzBmUDgvUkZueCt2WEVLNWdqN09YKy8yQm9nWCt0ekZoVk9ta2pzQit1emN0Wm1NUng5dkFJOCtQcndCUFByNDhBYW9aZ05vY29YT0NIM09md1AwZWNXamp6ZEFyTkJIVVNqMmNPN0VtVng3MVIxazgzWVErdFNsTkwvZjlUdFdyL3NXOVhVZWZid0JZaFFSeFRnK2RNTVhTQ1VEck8zZjBWSEVnY0JQVnkrbFZNNTc5UEVHaUU5b0hiM3FkdFZsdHpGNyt2ekJiL21iNkZXM2RSdVgwN1pqQTVtNmtSNTl2QUhpaEQ3SDJoZ1ZDdjFmZGJNMmV0bGg5NzQ5ckh4eUthbDBRNjArYmVJTkVGZjA2ZHZHS0RTRDBVZVVzR3psL1dSelJ3aDB3cU9QTjBETTBPZnkyNFp1WTFSQm4vWFBMSTlqR3lOdkFJOCt3ME9meDljc0paMXVqR0ViSTI4QWp6NGVmYndCYWc1OVZFQlB0cDJycnJqdHVCMGNHK28xNnpkNjlQRUdpRm1JS0lxbEhKTW5UdWZHYXdhamozT1dWRkt4ZSs5dUhuL3k2eDU5dkFGaVpnQWdOQ1Z1L3NEZjBWQS9HSDBjamtBTGovMzhxL1JrMnozNmVBUEVESDN5UjVnLzkwUE1tamEvMHNGeEFQclVhVGEvOEJUYlhsb2I4dzZPM2dBMWhqNTkyeGg5bm5Mb1R0akdLQkdrZk9iM0JvZ1greDlyWTlRMDVGdisvZHNZMWZrZFgyK0FHS0ZQcnQxM2NQUUdxTjNNUDZicHYzSFREWi96SFJ5OUFXb3Z3ckRNZi8vZ1B6QzZxWW15NytEb0RWQXo2S01EZW5LSHVYN2hsN2g0NW9KSzFjZWpqemRBTFF5eUNzam1Eakg3WFIvbCt2ZmZTcTdZWC93ZWZid0JZc3o5bW5MWXpiaW1TN25sejc1SWtIUlkyMy9ZUGZwNEE4UjIwV3R0a1lRZXl5MS8raTBtVE14UUxEcFVIKzQvMXJ6NkZ4NTl2QUZpSlgrY00xaHJXWFRwLytaZFU0ZFNLZzk4eWp3NjZ0Q1R6Zkh6dGY5STREZTh2QUhpSTM4d3RzQzhQL2s3NWwxOENVSEs0b1pBbjk0MlJ2OXYzKzlJSnpPZS9iMEJZakNvb2ltRm5VeWQ5QW11dU9URE5JMDFtTEIvcDVhQmJZenFQZnA0QThSRC9BSEY4aEhPR2J1UXkyWjlqZ21UUTJSQUgwTGZ4c2diSUthTFhrMHA3R1pVd3dWYy91NS80Snh6SWRPZ01hWi9HM0xmd2RFYklJYk1MMWhiSkowY3hlVXpsakp4NGhqR1RnQlRsaE9paisvZzZBMFFsL1NQc1NYbXYzc0o1NHlmemNSenk0Z29uRWNmYjREWUQ2SUtLQlRibWZ1dXV6aHYvSjh5NWgwRkdob1RIbjI4QVdwajBac3ZIT1NkazI5a3h2bC9TV1pFbm9tVFVvUmxoa1NmclcyYldmK3NSeDl2Z05nc2Vyc1lQM29lQzk2OUJDVGszQ2xKUUFhaGoxSlFMSVg4NUlrSG9oV0RSeDl2Z09wZjlKWklKMGZUTXZmcmFCbkpoSE1jRFkyRHF6N1dXZXJyRkd2V1A0eHJlN2VUVGpWNDlQRUdpTWVpOThvNVg2TWhmUjdwK2h5VHprMFRoa09nVDZWNTllcDFENUpKai9SUG01eEZFZmdoT0JudTErU0toN2g4eHIxTUd2ZGU0b1V1cHM1b1FBVDZKM2FIVW9JeHNPeG45Mk9NSlpGSVlxMUJuU0VFY3BYWnkySDlzUXR2Z0pNVGY2RjBoT25uZlp4M1QvazQrWHdQNTcyempxYlJpbklaZ3FBditqanEwc0tqank5bCs0NVZOTmFQSVZjNGVPYlJ6UmtDblNhaE16aWNONENQTjdQbzdlWWRvK2R6Mll4N0tKZUxwT29VZGZXS1F3ZjZZNDF6b0RRYzNGZWs0MkFqNzVsOUwwb3B6dHhoenlqM08yZElCUFVjNnR6T2EvdldFdWphdm5zZ1kwYk04ZWR2aHlWK2hURUYwc25SZk9BOXkwZ25takcyVkRuelg1SFhjU0tkem5BMkZIMGNvQVRLSm1UVnhqL25VTmVMQkxxMmI1LzVHV0M0MkdETGFKVm00Y1hmSkpNYVJ6bk1IajNrcGxTMDhIVkQvbDRvbHJvcitaY3pDQnpSMzBDcmdOV2JibWQveDNPa2trMDF2eUQzQmhpZUF3akRJdStkZlM4VG11ZVFMM1doSkJpRVBNZVZuZWlqTThDWm1nbWloM1liMkxqdFh2YTMvNFowc2huci9FYWNMNE8rNGFJM29GanFaTWFVMjVsNjdvZUdGUC9aSHRZWlVva0cybDc5djd6MDZvOUlKVWQ1OFhzRERFLzhoVkk3azhjdFpONjB1eWtVZTZwUy9PbEVJN3NQL29wbnR5OGhsUnpocjExNkF3eG4wUnNkY3hnemNpWlh6djBheHBhb3R2TUxVY1VudzVIc0sveHF5K2NJZFBxTXIwUzhBYXBtMFZzaWxSakZlK1o0bFhTaUdXdkxDTlZqQUlkRHFTU2h5ZlAwbHM5UktCMUdxYVRmL1BJR0dGYjZ4OWdpbDgyNGo3RWpwMUVNdXdkZGE2eUM5STlXQVp0Lyt4WDJ0LzhYeVdDRVA0TGhEVEE4N3M0WER6SGh3cnU0WU5KMTFibm90U0hwVkFOYmR2NGZmdmZhdjFHWEhPMFh2ZDRBd3hSLzZUQi9jdTZmTStmQ3Y2elNSVzlJWFhvRUwrLzVEN2JzZkpDNjFCZ3ZmbStBNFM5Nnh6ZGZ3dngzZnpGNm9xUUtGNzNKb0lIOTdWdDU5c1g3MENvSnZ1TGpEZkRHNGxkSHovWmZPZWRyQkxvT2EwdlZ0ZWgxRnFVU0ZFb2RQUDNDM1JUTFIxQXFWZk9IM2Q0by9FNXc1WUJZT2N5eDhPSUhHWms1ajBLNUV5WEJHYStZaUp6NDB2eXg1QjRkY3doMGlsLysxMTl4Skx1TGRNSnZkbmtEREV2K1lHeEl5MFhmWU1yRUZvcGxTem81Nmd5bmN4QUZ4V0tSc2dtSE5vRURyUVZSMFpYTFZMS0JaN2JkeCs2RDY3MzR2UUdHSzM1RmFQS01iWnBEWTkwNTdOcjdORW9FZDhZMml3U2NReWxGc1ZUZ25lZlBZTnpZNWtvWFNlbVgrWFVBSFljTVhaMWxNdWxHMmw3OU1XMnYvckJ5ek1HWE80Yzk0djQ0ZENTODBHVGhMR0IrSllwaU9jKzQwZWZ6dDNjdHA2RytHV09PWGFKM2dGWlF5RHUyUHBjRm0rSGdrZWRadmVrMmxFcmdkM3I5REhCU3pKRUlHczZhQmJreDhORVBMV1ZrNDJoNnNoYlY5LzZrQXh2QWpyWThZU2xGNkE2eS92blBnRVMvMSsvMGVnT2NkQlhsVElmV0FWMDloMWwwNVozTW1uWUpQVm1EMXJvZitpU1NzSGQzaWU0akNoVVUrZVdtVDVNckhpQVJOUGlkM3BPWmNmMFFuQ1VmaEZJVWlsa21UNWpHamRmY1JhRXdzSVVxYUEzWnJPWDFWOHNra3lrMnYvZ0ErOXAvVFRKbzlPTDNCcWoyR2NqaHJPV1d4VXVvejJRSURmMFd2bEw1MXlzNzh3UlNUOXVyUDZnY2MvQTd2ZDRBVlI1YUJXUnpuU3k4NG5abVRiK1VYTjRNYUtVRVFRTDI3aTZRNzY3bnRmMnIyZnpiQjBpbi9Ca2ZiNEFxRHhHSnVzYzNUK2I2OTMrS1FyRS8ra1FHZ1h3KzVPRGVGTzA5YlR5emZVbDB0dDhmYy9BR3FINERLRXJsQWpmZDhFVkdqV2drSEtMbUw4cXg1eFhvNm1sbjQ3WXZWSTQ1SlAweEIyK0E2a2Vmbmx3SEN5NjZtUVVYTFJyVVBkNDVTQ1RnNFA2UTlvUENNeTkramtOSHR2dXovZDRBY1VHZkFtT2FKbkhURFhkVEtnOUdINlVnbnkremYwK0M1M1o4bmQwSDF2blhITHdCNG9RK2VXNjY0UjdHTkRWVEtnK0JQbUxZdnlmQjFoMHJhSHY5ZTZRU0k3MzR2UUhpaGo1WDA1TXo2QUhvb3dOTFo3dm14Yll0UFBmN3I2QWw1VTg0ZUFQVUJ2cUlXTUtTNHFYZjdtUERscnN3cG9oU0NiL285UWFvQmZSeEJJSHcrcTR5YTU3OUxJWHlRWFNOdjkvcURWQkQ2Qk1rSEIySGhKLzk0dTg1MUxXWlFQc3pQdDRBTllJK2lNRVp4YXFuZnNEdlh2OGhxY1FvTDM1dmdOcEFIMk1OOVduTnhtZWY0VmN2UEVCOTNSaC9zY1Vib0RiUXgxcExmWjNtcGQvdlpNV2F6NUJLcFhEV0wzaTlBV0tVK1krSFB0R2lGN3E2dS9qUnY5OU5LV3hIKzJNTzNnQnhZdjl5V0R4QjFjZVNUQ2dlWGZrVjl1eDdnYnIwS0t6MTZPTU5FSWZCVlpwczdnaXpwaTFpL3R5cjZja1BnVDRaemJhWE5yUDVoWi9RV0Q4R1k0cCs0THdCNHBINVExT21vYjZabXovd3Q0VEc5WHRveXpsSG9LRW5tK094bi84OWdVNzZkL3U5QWVKa0FFMmgwTTJOMS93dkprK2NUTEUwa1AwdDZiVGk0U2UveWU2OWJhU1NHYi9aNVEwUUgvVEo1WTh3YS9vaXJycWlOYnJjUGdCOU1uV2FiVzIvWnYzRzcwZFBuMWgveU0wYklFYm9VNThaeFMyTDc0RlpoM09EMFNlYnk3RnM1WDJJVXRYMkJxODNnSTlob00rMWR6TjV3aVFLUlR2Z2ZtOEZmZFo0azkzN1hpS2Rxc2Rhano3ZUFIRkRuOHRib3cwdmZSejBlZWI3TkdTYU1NYWpqemVBUng0ZjNnQWVmWHg0QTNqMDhlRU40TkhIaHplQVJ4OGYzZ0FuUC9wa2N5ZEduL3FNUng1dmdKaWlqekZsR3V1YnVlWFBoa1lmcmFFNzI4T3luM24wOFFhSVkvYlBkN0xveWp1WlBIRXcra1NYWEJScm4vNGh1L2YrMXFPUE4wQzh4Si9MZHpGMXlnS3V2dkpXc2ptRDF2M0ZuNm5UN05pMWc2ZWVmb2g2ano3ZUFIRkNIMnNOaVNESmh4ZmZSektSd0ZxaHQ3K1ljdzZsSE9VdzVOR1ZTeWlWQy8zZSsvVGhEVkRkQXliUnd2ZTZoWGR4NFpTcDVBcjkzL0szTGxyNHJsNzNNRHQzYlNhVEh1RnZlSGtEeEFoOUNsMWNPR1UrMXkyOEkzck5XUWFnVDFxemM5Y09WcTk3a1BxTWIxbnFEUkJEOVBuSTR2dElCQUhXeXRIN3ZYM1I1OGNybDFBT1N5aWwvUzB2YndDUFBqNjhBVHo2K1BBRzhPamp3eHZBbzQ4UGJ3Q1BQajY4QVR6NitQQUdxQXIwT2Y4TjBPY1ZqejdlQUxGQ0gwVysyTTI3cGl5STBDYy9HSDNxVXByZjcvb2RxOWQ5aS9vNmp6NVZiQUQveVEwTTV3QUhIN3p1YnBLSi91Z1Q0WkVEZ1pardXJwbkJ2ZXNOUFZ5UEhPc2JYeVpKOC9xd3RvSGRDVGEyZmhGYmN6ZmVwY2N2bisyR09Nb1NHaldiejQrU2ZhaTRJZm1nN2ZwTEU0d0pob0pvTWdLRnlObmlqSlMwb1pLV1NKUVM2dVQzSnZTOFNGbVVUMlBBQml0czd0cTRaeE5HbVBPT2ZtNm4vZ0FCR1R6K0FINlNlVW9aNHQ0MjFvV2VtVnJCbU40VzRWNWhubVdEeEpZN0VYQ3hnSnhxNGl6R0NnTVd4Mk51dzhzN1hFZkExNzJUa0NBWU5GbnFBQUFBQUJKUlU1RXJrSmdnZz09IiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifV19">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Unwmark">
+<meta name="theme-color" content="#111">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;color:#ccc;font-family:system-ui,sans-serif;padding:16px;max-width:860px;margin:0 auto}
+h1{font-size:20px;font-weight:700;color:#fff;margin-bottom:4px}
+.sub{font-size:12px;color:#555;margin-bottom:20px}
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:16px;margin-bottom:12px}
+.step{font-size:11px;color:#555;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;font-weight:600}
+label.pick{display:block;padding:18px;border:1.5px dashed #333;border-radius:8px;background:#161616;color:#888;cursor:pointer;font-size:14px;text-align:center;transition:border-color .15s}
+label.pick:hover{border-color:#5040d0;color:#ccc}
+input[type=file]{display:none}
+#fname{font-size:11px;color:#555;margin-top:8px;text-align:center}
+#vbox{margin-top:14px;display:none}
+#cvwrap{position:relative;line-height:0;border-radius:8px;overflow:hidden;background:#000}
+#vc{display:block;width:100%}
+#mc{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.6}
+#dc{position:absolute;inset:0;width:100%;height:100%}
+#dc.w{pointer-events:none;cursor:default}
+#dc.d{pointer-events:all;cursor:crosshair;touch-action:none}
+.pbrow{display:flex;align-items:center;gap:10px;margin-top:10px}
+#pbtn{width:38px;height:38px;border-radius:50%;background:#222;border:1.5px solid #333;color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .15s}
+#pbtn:hover{border-color:#5040d0}
+#seek{flex:1;-webkit-appearance:none;height:5px;background:#2a2a2a;border-radius:3px;outline:none;cursor:pointer}
+#seek::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#5040d0;cursor:pointer}
+#tc{font-size:12px;color:#555;min-width:80px;text-align:right;flex-shrink:0}
+.tbrow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tb{flex:1;min-width:60px;padding:10px 8px;border-radius:8px;border:1.5px solid #2a2a2a;background:#161616;color:#666;cursor:pointer;font-size:13px;text-align:center;transition:all .15s;user-select:none}
+.tb:active{transform:scale(.95)}
+.tb.on{background:#1c1830;border-color:#5040d0;color:#a090ff}
+.brow{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.brow label{font-size:12px;color:#555;flex-shrink:0}
+.brow input[type=range]{flex:1;-webkit-appearance:none;height:5px;background:#2a2a2a;border-radius:3px;outline:none}
+.brow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#a090ff;cursor:pointer}
+#bszv{font-size:12px;color:#a090ff;min-width:36px;text-align:right}
+.hint{font-size:12px;color:#555;line-height:1.7}
+.hint strong{color:#a090ff}
+.frow{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.frow label{font-size:12px;color:#555;flex-shrink:0}
+.frow input[type=range]{flex:1;-webkit-appearance:none;height:5px;background:#2a2a2a;border-radius:3px;outline:none}
+.frow input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#a090ff;cursor:pointer}
+#fratev{font-size:12px;color:#a090ff;min-width:48px;text-align:right}
+.fnote{font-size:11px;color:#555;margin-bottom:14px;line-height:1.6}
+#gobtn{display:block;width:100%;padding:15px;border-radius:10px;background:#5040d0;border:none;color:#fff;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.02em}
+#gobtn:active{opacity:.85}
+#gobtn:disabled{background:#252525;color:#444;cursor:not-allowed}
+.pbar{height:5px;background:#222;border-radius:3px;overflow:hidden;margin:14px 0 6px}
+.pfill{height:100%;background:#5040d0;width:0%;transition:width .3s;border-radius:3px}
+.plbl{font-size:12px;color:#666;min-height:18px}
+#strip{display:none;gap:5px;overflow-x:auto;padding:6px 0;margin-top:10px;-webkit-overflow-scrolling:touch}
+.ft{flex-shrink:0;width:90px;height:54px;border-radius:6px;overflow:hidden;border:2px solid #1e4030}
+.ft img{width:100%;height:100%;object-fit:cover;display:block}
+#dlcard{border-radius:12px;padding:16px;margin-bottom:12px;border:2px solid #1a3020;background:#0c160c}
+#dlcard .step{color:#1e4028}
+#dlp{font-size:13px;color:#1e4028;margin-bottom:14px;line-height:1.6}
+#dlbtn{display:block;width:100%;padding:16px;border-radius:10px;background:#101a10;border:2px solid #1a3020;color:#1e4028;font-size:15px;font-weight:700;cursor:not-allowed;text-align:center;transition:all .2s;letter-spacing:.02em}
+#dlbtn.on{background:#1a3822;border-color:#35aa55;color:#55ee88;cursor:pointer}
+#dlbtn.on:active{opacity:.85}
+#dlmsg{font-size:12px;color:#1e4028;margin-top:10px;text-align:center;line-height:1.5;min-height:18px}
+</style>
+</head>
+<body>
+
+<h1>✦ Unwmark</h1>
+<p class="sub">Remove watermarks from video — works offline, no internet needed</p>
+
+<div class="card">
+  <div class="step">Step 1 — Load video</div>
+  <label class="pick" for="fi">▶ &nbsp;Tap to choose a video file</label>
+  <input type="file" id="fi" accept="video/*">
+  <div id="fname">No video loaded</div>
+  <div id="vbox">
+    <div id="cvwrap">
+      <canvas id="vc"></canvas>
+      <canvas id="mc"></canvas>
+      <canvas id="dc" class="w"></canvas>
+    </div>
+    <div class="pbrow">
+      <button id="pbtn" onclick="togglePlay()">▶</button>
+      <input type="range" id="seek" min="0" max="1000" value="0" oninput="seekTo(+this.value)">
+      <span id="tc">0:00 / 0:00</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="step">Step 2 — Paint the watermark</div>
+  <div class="tbrow">
+    <div class="tb on" id="m-watch" onclick="setMode('w')">▶ Watch</div>
+    <div class="tb"    id="m-draw"  onclick="setMode('d')">✏ Draw</div>
+    <div class="tb on" id="t-paint" onclick="setTool('paint')">● Paint</div>
+    <div class="tb"    id="t-erase" onclick="setTool('erase')">○ Erase</div>
+    <div class="tb"    onclick="undo()">↩ Undo</div>
+    <div class="tb"    onclick="clearMask()">✕ Clear</div>
+  </div>
+  <div class="brow">
+    <label>Brush size</label>
+    <input type="range" id="bsz" min="4" max="100" value="28"
+      oninput="bsize=+this.value;document.getElementById('bszv').textContent=this.value+'px'">
+    <span id="bszv">28px</span>
+  </div>
+  <p class="hint">
+    <strong>▶ Watch</strong> — play/scrub to find the watermark.<br>
+    <strong>✏ Draw</strong> — paint blue over every pixel of it.
+  </p>
+</div>
+
+<div class="card">
+  <div class="step">Step 3 — Remove &amp; download</div>
+  <div class="frow">
+    <label>Frame rate</label>
+    <input type="range" id="frate" min="1" max="24" value="8"
+      oninput="updateFpsDisplay()">
+    <span id="fratev">8 fps</span>
+  </div>
+  <p class="fnote" id="framecount">—</p>
+  <button id="gobtn" onclick="runRemoval()">✦ Remove Watermark</button>
+  <div class="pbar"><div class="pfill" id="pfill"></div></div>
+  <div class="plbl" id="plbl"></div>
+  <div id="strip"></div>
+</div>
+
+<div id="dlcard">
+  <div class="step">Step 4 — Download</div>
+  <p id="dlp">Complete Step 3 first — the download button unlocks automatically.</p>
+  <button id="dlbtn" onclick="doDownload()" disabled>↓ Download Cleaned Video (MP4)</button>
+  <div id="dlmsg"></div>
+</div>
+
+<script>
+// ─── State ────────────────────────────────────────────────────────
+let vid = null, raf = null, vidURL = null;
+let tool = 'paint', bsize = 28, inDrawMode = false;
+let strokes = [], cur = null, inking = false;
+
+// We no longer store all frames. Instead we re-encode on demand.
+let lastFps = 8;
+let totalFramesDone = 0;
+let downloadReady = false;
+// Store encoded video blob
+let outputBlob = null;
+
+const vc = document.getElementById('vc');
+const mc = document.getElementById('mc');
+const dc = document.getElementById('dc');
+const vx = vc.getContext('2d');
+const mx = mc.getContext('2d');
+
+// ─── FPS display ──────────────────────────────────────────────────
+function updateFpsDisplay() {
+  const fps = +document.getElementById('frate').value;
+  document.getElementById('fratev').textContent = fps + ' fps';
+  if (vid && vid.duration) {
+    const n = Math.ceil(vid.duration * fps);
+    document.getElementById('framecount').textContent =
+      `≈ ${n} frames at ${fps} fps for ${fmt(vid.duration)} video`;
+  }
+}
+document.getElementById('frate').addEventListener('input', updateFpsDisplay);
+
+// ─── File load ────────────────────────────────────────────────────
+document.getElementById('fi').addEventListener('change', e => {
+  const f = e.target.files[0];
+  if (f) loadFile(f);
+});
+
+function loadFile(file) {
+  if (!file.type.startsWith('video/')) { alert('Please choose a video file.'); return; }
+  if (vidURL) URL.revokeObjectURL(vidURL);
+  if (vid) { vid.pause(); vid.src = ''; cancelAnimationFrame(raf); }
+
+  vidURL = URL.createObjectURL(file);
+  document.getElementById('fname').textContent = file.name;
+
+  vid = document.createElement('video');
+  vid.muted = true;
+  vid.playsInline = true;
+  vid.preload = 'auto';
+  vid.src = vidURL;
+  vid.addEventListener('loadedmetadata', onVidReady);
+  vid.load();
+}
+
+function onVidReady() {
+  const mw = Math.min(window.innerWidth - 32, 860);
+  const s  = Math.min(mw / vid.videoWidth, 1);
+  const W  = Math.round(vid.videoWidth  * s);
+  const H  = Math.round(vid.videoHeight * s);
+  vc.width = mc.width = dc.width  = W;
+  vc.height= mc.height= dc.height = H;
+
+  vid.currentTime = 0;
+  vid.onseeked = () => vx.drawImage(vid, 0, 0, W, H);
+
+  document.getElementById('vbox').style.display = 'block';
+  document.getElementById('plbl').textContent = '';
+  document.getElementById('pfill').style.width = '0%';
+  document.getElementById('strip').style.display = 'none';
+  document.getElementById('strip').innerHTML = '';
+  clearMask(); strokes = [];
+  outputBlob = null; downloadReady = false;
+  lockDl();
+  setMode('w');
+  startRenderLoop();
+  updateFpsDisplay();
+}
+
+// ─── Render loop ──────────────────────────────────────────────────
+function startRenderLoop() {
+  cancelAnimationFrame(raf);
+  function loop() {
+    if (vid && !vid.paused && !vid.ended) {
+      vx.drawImage(vid, 0, 0, vc.width, vc.height);
+      tickTime();
+    }
+    raf = requestAnimationFrame(loop);
+  }
+  loop();
+}
+
+// ─── Playback ─────────────────────────────────────────────────────
+function togglePlay() {
+  if (!vid) return;
+  if (vid.paused) {
+    vid.play();
+    document.getElementById('pbtn').textContent = '⏸';
+  } else {
+    vid.pause();
+    document.getElementById('pbtn').textContent = '▶';
+    vx.drawImage(vid, 0, 0, vc.width, vc.height);
+  }
+}
+
+function seekTo(v) {
+  if (!vid) return;
+  vid.currentTime = (v / 1000) * (vid.duration || 0);
+  vid.onseeked = () => { vx.drawImage(vid, 0, 0, vc.width, vc.height); tickTime(); };
+}
+
+function tickTime() {
+  const c = vid.currentTime, d = vid.duration || 0;
+  document.getElementById('tc').textContent = fmt(c) + ' / ' + fmt(d);
+  document.getElementById('seek').value = Math.round((c / (d || 1)) * 1000);
+}
+
+function fmt(t) { return Math.floor(t/60) + ':' + String(Math.floor(t%60)).padStart(2,'0'); }
+
+// ─── Mode & Tools ─────────────────────────────────────────────────
+function setMode(m) {
+  inDrawMode = m === 'd';
+  document.getElementById('m-watch').classList.toggle('on', !inDrawMode);
+  document.getElementById('m-draw').classList.toggle('on', inDrawMode);
+  dc.className = inDrawMode ? 'd' : 'w';
+}
+
+function setTool(t) {
+  tool = t;
+  document.getElementById('t-paint').classList.toggle('on', t === 'paint');
+  document.getElementById('t-erase').classList.toggle('on', t === 'erase');
+}
+
+// ─── Drawing ──────────────────────────────────────────────────────
+function getPos(e) {
+  const r  = dc.getBoundingClientRect();
+  const sx = dc.width  / r.width;
+  const sy = dc.height / r.height;
+  const s  = e.touches ? e.touches[0] : e;
+  return { x: (s.clientX - r.left) * sx, y: (s.clientY - r.top) * sy };
+}
+
+dc.addEventListener('mousedown',  e => startDraw(getPos(e)));
+dc.addEventListener('mousemove',  e => { if (inking) moveDraw(getPos(e)); });
+dc.addEventListener('mouseup',    () => endDraw());
+dc.addEventListener('mouseleave', () => endDraw());
+dc.addEventListener('touchstart', e => { e.preventDefault(); startDraw(getPos(e)); }, { passive: false });
+dc.addEventListener('touchmove',  e => { e.preventDefault(); if (inking) moveDraw(getPos(e)); }, { passive: false });
+dc.addEventListener('touchend',   e => { e.preventDefault(); endDraw(); }, { passive: false });
+
+function startDraw(p) { inking = true; cur = { op: tool, sz: bsize, pts: [p] }; dot(p); }
+function moveDraw(p)  { cur.pts.push(p); dot(p); }
+function endDraw()    { if (!inking) return; inking = false; if (cur) { strokes.push({...cur}); cur = null; } }
+
+function dot(p) {
+  if (tool === 'erase') {
+    mx.globalCompositeOperation = 'destination-out';
+    mx.fillStyle = 'rgba(0,0,0,1)';
+    mx.beginPath(); mx.arc(p.x, p.y, bsize/2, 0, Math.PI*2); mx.fill();
+  } else {
+    mx.globalCompositeOperation = 'source-over';
+    const g = mx.createRadialGradient(p.x, p.y, 0, p.x, p.y, bsize/2);
+    g.addColorStop(0, 'rgba(80,120,255,0.95)');
+    g.addColorStop(0.65, 'rgba(80,120,255,0.7)');
+    g.addColorStop(1, 'rgba(80,120,255,0)');
+    mx.fillStyle = g;
+    mx.beginPath(); mx.arc(p.x, p.y, bsize/2, 0, Math.PI*2); mx.fill();
+  }
+  mx.globalCompositeOperation = 'source-over';
+}
+
+function undo() {
+  if (!strokes.length) return;
+  strokes.pop();
+  mx.clearRect(0, 0, mc.width, mc.height);
+  const ot = tool, os = bsize;
+  strokes.forEach(s => { tool = s.op; bsize = s.sz; s.pts.forEach(p => dot(p)); });
+  tool = ot; bsize = os;
+}
+
+function clearMask() { strokes = []; mx.clearRect(0, 0, mc.width, mc.height); }
+
+// ─── Mask export ──────────────────────────────────────────────────
+function getMask() {
+  const d = mx.getImageData(0, 0, mc.width, mc.height).data;
+  const m = new Uint8Array(mc.width * mc.height);
+  for (let i = 0; i < m.length; i++) m[i] = d[i*4+3] > 10 ? 1 : 0;
+  return m;
+}
+
+// ─── Inpaint (operates on existing pixel array in-place) ──────────
+function inpaintFrame(imgData, maskSrc) {
+  const W = imgData.width, H = imgData.height;
+  const d = new Uint8ClampedArray(imgData.data);
+  const m = new Uint8Array(maskSrc); // copy — we clear as we fill
+  for (let pass = 0; pass < 4; pass++) {
+    for (let y = 0; y < H; y++) {
+      for (let x = 0; x < W; x++) {
+        if (!m[y*W+x]) continue;
+        let r=0,g=0,b=0,n=0;
+        for (const rad of [1,2,3,5,8]) {
+          for (let dy=-rad; dy<=rad; dy++) for (let dx=-rad; dx<=rad; dx++) {
+            if (!dx && !dy) continue;
+            const nx=x+dx, ny=y+dy;
+            if (nx<0||nx>=W||ny<0||ny>=H) continue;
+            if (!m[ny*W+nx]) { const i=(ny*W+nx)*4; r+=d[i]; g+=d[i+1]; b+=d[i+2]; n++; }
+          }
+          if (n >= 6) break;
+        }
+        if (n) { const i=(y*W+x)*4; d[i]=r/n|0; d[i+1]=g/n|0; d[i+2]=b/n|0; d[i+3]=255; m[y*W+x]=0; }
+      }
+    }
+    for (let y=H-1; y>=0; y--) {
+      for (let x=W-1; x>=0; x--) {
+        if (!m[y*W+x]) continue;
+        let r=0,g=0,b=0,n=0;
+        for (const rad of [1,2,3,5,8]) {
+          for (let dy=-rad; dy<=rad; dy++) for (let dx=-rad; dx<=rad; dx++) {
+            if (!dx && !dy) continue;
+            const nx=x+dx, ny=y+dy;
+            if (nx<0||nx>=W||ny<0||ny>=H) continue;
+            if (!m[ny*W+nx]) { const i=(ny*W+nx)*4; r+=d[i]; g+=d[i+1]; b+=d[i+2]; n++; }
+          }
+          if (n >= 6) break;
+        }
+        if (n) { const i=(y*W+x)*4; d[i]=r/n|0; d[i+1]=g/n|0; d[i+2]=b/n|0; d[i+3]=255; m[y*W+x]=0; }
+      }
+    }
+  }
+  return new ImageData(d, W, H);
+}
+
+// ─── Seek helper ─────────────────────────────────────────────────
+function seekVideo(t) {
+  return new Promise(res => {
+    // Already at this time (within 1ms)?
+    if (Math.abs(vid.currentTime - t) < 0.001) { res(); return; }
+    vid.onseeked = res;
+    vid.currentTime = t;
+  });
+}
+
+// ─── Run removal + encode in ONE streaming pass ───────────────────
+async function runRemoval() {
+  if (!vid) { alert('Load a video first.'); return; }
+
+  const md = mx.getImageData(0, 0, mc.width, mc.height).data;
+  let hasMask = false;
+  for (let i = 3; i < md.length; i += 4) if (md[i] > 10) { hasMask = true; break; }
+  if (!hasMask) { alert('Switch to ✏ Draw mode and paint over the watermark first.'); return; }
+
+  if (typeof VideoEncoder === 'undefined') {
+    alert('This browser doesn\'t support VideoEncoder.\nPlease use Chrome or Edge on Android.');
+    return;
+  }
+
+  const gobtn = document.getElementById('gobtn');
+  gobtn.disabled = true;
+  outputBlob = null; downloadReady = false;
+  lockDl();
+
+  vid.pause();
+  document.getElementById('pbtn').textContent = '▶';
+
+  const fps   = +document.getElementById('frate').value;
+  const dur   = vid.duration;
+  const step  = 1 / fps;
+  const W = vc.width, H = vc.height;
+
+  // Build time list
+  const times = [];
+  for (let t = 0; t < dur; t += step) times.push(+t.toFixed(4));
+  const total = times.length;
+
+  const mask = getMask();
+
+  // ── Load mp4-muxer ──────────────────────────────────────────────
+  setP(0, 'Loading MP4 encoder…');
+  await new Promise((res, rej) => {
+    if (window.Mp4Muxer) { res(); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.2/build/mp4-muxer.js';
+    s.onload = res;
+    s.onerror = () => rej(new Error('Failed to load MP4 encoder – check internet'));
+    document.head.appendChild(s);
+  });
+
+  // ── Decode audio once ───────────────────────────────────────────
+  setP(1, 'Reading audio…');
+  const sampleRate = 44100;
+  let audioBuffer = null;
+  try {
+    const arrayBuf = await fetch(vidURL).then(r => r.arrayBuffer());
+    const ac = new (window.AudioContext || window.webkitAudioContext)({ sampleRate });
+    audioBuffer = await ac.decodeAudioData(arrayBuf);
+  } catch(e) { console.warn('Audio decode failed:', e.message); }
+
+  // ── Setup muxer ─────────────────────────────────────────────────
+  setP(2, 'Setting up encoder…');
+  const { Muxer, ArrayBufferTarget } = Mp4Muxer;
+  const target = new ArrayBufferTarget();
+  const muxerOpts = {
+    target,
+    video: { codec: 'avc', width: W, height: H },
+    fastStart: 'in-memory'
+  };
+  if (audioBuffer) {
+    muxerOpts.audio = { codec: 'aac', sampleRate, numberOfChannels: audioBuffer.numberOfChannels };
+  }
+  const muxer = new Muxer(muxerOpts);
+
+  // ── Video encoder ───────────────────────────────────────────────
+  const videoEncoder = new VideoEncoder({
+    output: (chunk, meta) => muxer.addVideoChunk(chunk, meta),
+    error: e => console.error('VideoEncoder error:', e)
+  });
+  videoEncoder.configure({
+    codec: 'avc1.42001f',
+    width: W, height: H,
+    bitrate: 8_000_000,
+    framerate: fps
+  });
+
+  // ── Audio encoder ───────────────────────────────────────────────
+  let audioEncoder = null;
+  if (audioBuffer && typeof AudioEncoder !== 'undefined') {
+    audioEncoder = new AudioEncoder({
+      output: (chunk, meta) => muxer.addAudioChunk(chunk, meta),
+      error: e => console.warn('AudioEncoder:', e.message)
+    });
+    audioEncoder.configure({
+      codec: 'mp4a.40.2',
+      sampleRate,
+      numberOfChannels: audioBuffer.numberOfChannels,
+      bitrate: 192000
+    });
+  }
+
+  // ── STREAMING: inpaint → encode → discard, frame by frame ──────
+  const tmp = document.createElement('canvas');
+  tmp.width = W; tmp.height = H;
+  const tc2 = tmp.getContext('2d');
+
+  const strip = document.getElementById('strip');
+  strip.innerHTML = ''; strip.style.display = 'flex';
+
+  let thumbCanvas = null; // reuse for thumbnails
+
+  for (let i = 0; i < total; i++) {
+    const pct = 3 + Math.round((i / total) * 82);
+    setP(pct, `Frame ${i+1} / ${total}`);
+
+    await seekVideo(times[i]);
+    tc2.drawImage(vid, 0, 0, W, H);
+    const raw = tc2.getImageData(0, 0, W, H);
+    const cleaned = inpaintFrame(raw, mask);   // inpaint
+    tc2.putImageData(cleaned, 0, 0);            // put back for encoding
+
+    // Encode immediately — do NOT store ImageData
+    const bmp = await createImageBitmap(tmp);
+    const ts  = Math.round((i / fps) * 1_000_000);
+    const dur2 = Math.round(1_000_000 / fps);
+    const frame = new VideoFrame(bmp, { timestamp: ts, duration: dur2 });
+    videoEncoder.encode(frame, { keyFrame: i % Math.max(1, fps * 2) === 0 });
+    frame.close(); bmp.close();
+
+    // Thumbnail every 6 frames (cheap)
+    if (i % 6 === 0 || i === total - 1) {
+      if (!thumbCanvas) { thumbCanvas = document.createElement('canvas'); thumbCanvas.width=90; thumbCanvas.height=54; }
+      thumbCanvas.getContext('2d').drawImage(tmp, 0, 0, 90, 54);
+      const ft  = document.createElement('div'); ft.className = 'ft';
+      const img = document.createElement('img'); img.src = thumbCanvas.toDataURL('image/jpeg', 0.6);
+      ft.appendChild(img); strip.appendChild(ft);
+      strip.scrollLeft = strip.scrollWidth;
+    }
+
+    // Yield every 6 frames
+    if (i % 6 === 0) await new Promise(r => setTimeout(r, 0));
+  }
+
+  // ── Flush video encoder ─────────────────────────────────────────
+  setP(87, 'Flushing video encoder…');
+  await videoEncoder.flush();
+
+  // ── Encode audio ────────────────────────────────────────────────
+  if (audioEncoder && audioBuffer) {
+    setP(90, 'Encoding audio…');
+    const totalSamples = audioBuffer.length;
+    const chunkSize    = 4096;
+    const numCh        = audioBuffer.numberOfChannels;
+    const channels     = [];
+    for (let c = 0; c < numCh; c++) channels.push(audioBuffer.getChannelData(c));
+
+    for (let offset = 0; offset < totalSamples; offset += chunkSize) {
+      const end   = Math.min(offset + chunkSize, totalSamples);
+      const count = end - offset;
+      const ts    = Math.round((offset / sampleRate) * 1_000_000);
+      const interleaved = new Float32Array(count * numCh);
+      for (let i = 0; i < count; i++)
+        for (let c = 0; c < numCh; c++)
+          interleaved[i * numCh + c] = channels[c][offset + i];
+      const ad = new AudioData({
+        format: 'f32', sampleRate,
+        numberOfFrames: count, numberOfChannels: numCh,
+        timestamp: ts, data: interleaved
+      });
+      audioEncoder.encode(ad);
+      ad.close();
+      if (offset % (chunkSize * 12) === 0) await new Promise(r => setTimeout(r, 0));
+    }
+    await audioEncoder.flush();
+  }
+
+  // ── Finalize ────────────────────────────────────────────────────
+  setP(96, 'Building MP4…');
+  muxer.finalize();
+
+  outputBlob = new Blob([target.buffer], { type: 'video/mp4' });
+
+  if (outputBlob.size < 1000) {
+    document.getElementById('plbl').textContent = '❌ Output was empty — try again';
+    gobtn.disabled = false;
+    return;
+  }
+
+  // Reset video to start
+  vid.currentTime = 0;
+  await seekVideo(0);
+  vx.drawImage(vid, 0, 0, W, H);
+
+  setP(100, `✓ ${total} frames cleaned — ready to download`);
+  gobtn.disabled = false;
+  downloadReady = true;
+  unlockDl(total);
+}
+
+function setP(pct, txt) {
+  document.getElementById('pfill').style.width = pct + '%';
+  document.getElementById('plbl').textContent  = txt;
+}
+
+// ─── Download — just saves the already-encoded blob ───────────────
+function doDownload() {
+  if (!outputBlob) { alert('Run removal first.'); return; }
+  const btn = document.getElementById('dlbtn');
+  btn.disabled = true;
+
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(outputBlob);
+  a.download = 'cleaned_video.mp4';
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 5000);
+
+  const hasAudio = outputBlob.size > 50000; // rough check
+  document.getElementById('dlmsg').textContent =
+    '✓ Downloaded — ready for YouTube Create!';
+  btn.textContent  = '↓ Download Again';
+  btn.disabled = false;
+}
+
+// ─── DL card helpers ──────────────────────────────────────────────
+function lockDl() {
+  const btn = document.getElementById('dlbtn');
+  btn.classList.remove('on'); btn.disabled = true;
+  document.getElementById('dlp').textContent = 'Complete Step 3 first — the download button unlocks automatically.';
+  document.getElementById('dlp').style.color = '#1e4028';
+  document.getElementById('dlcard').style.borderColor = '#1a3020';
+  document.getElementById('dlmsg').textContent = '';
+}
+
+function unlockDl(count) {
+  const btn = document.getElementById('dlbtn');
+  btn.classList.add('on'); btn.disabled = false;
+  document.getElementById('dlp').textContent = '✓ ' + count + ' frames cleaned — tap below to download.';
+  document.getElementById('dlp').style.color = '#40cc70';
+  document.getElementById('dlcard').style.borderColor = '#35aa55';
+  document.getElementById('dlcard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>
